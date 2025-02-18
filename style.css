@@ -38,34 +38,4 @@
 #hamburger-menu {
     display: none;  /* Hide the hamburger menu by default */
 }
-@media (max-width: 768px) {
-    #main-nav {
-        flex-direction: column;  /* navbar vertically */
-        align-items: flex-start; /* move to the left */
-        padding: 1em 2em;
-    }
 
-    #main-nav ul {
-        flex-direction: column;   /* navbar vertically */
-        gap: 10px;
-        width: 100%;              
-        display: none;            /* hide menu initally*/
-        text-align: left;         /* align the text to the left */
-    }
-
-    /* hamburger menu */
-    #hamburger-menu {
-        display: block; /* dispaly it */
-        background: none;
-        border: none;
-        font-size: 2rem;
-        color: white;
-        cursor: pointer;
-        padding: 10px;
-    }
-
-    /* show the menu when the hamburger icon is clicked */
-    #main-nav ul.show {
-        display: flex;  /* show the menu when the 'show' class is added */
-    }
-}
