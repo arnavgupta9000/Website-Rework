@@ -39,7 +39,7 @@
     #main-nav {
         flex-direction: column;  /* navbar vertically */
         align-items: flex-start; /* move to the left */
-        /* padding: 1em 2em; */
+        padding: 1em 2em; 
     }
     #main-nav ul {
         flex-direction: column;   /* navbar vertically */
@@ -47,16 +47,20 @@
         width: 100%;              
         display: none;            /* hide menu initally*/
         text-align: left;         /* align the text to the left */
+        background: rgba(0, 0, 0, 0.8); /* Ensure visibility */
+        padding: 1em;
+        border-radius: 10px;
+
     }
     /* hamburger menu */
     #hamburger-menu {
         display: block; /* dispaly it */
-        background: none;
+        background: rgba(0, 0, 0, 0.6);
         border: none;
-        font-size: 2rem;
+        font-size: 1.5rem;
         color: white;
         cursor: pointer;
-        /* padding: 10px; */
+        padding: 10px;
     }
     /* show the menu when the hamburger icon is clicked */
     #main-nav ul.show {
