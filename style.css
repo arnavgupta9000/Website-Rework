@@ -35,16 +35,20 @@
     color: rgb(255, 152, 0);
 }
 
+#hamburger-menu {
+    display: none;
+}
+
 @media (max-width: 768px) {
     #main-nav {
         flex-direction: column;  /* navbar vertically */
-        align-items: flex-start; /* move to the left */
-        padding: 1em 2em; 
+        align-items: center; /* move to the center */
+        padding: 1em; 
     }
     #main-nav ul {
         flex-direction: column;   /* navbar vertically */
         gap: 10px;
-        width: 100%;              
+        max-width: auto;      /* prevent from full strecthing */              
         display: none;            /* hide menu initally*/
         text-align: left;         /* align the text to the left */
         background: rgba(0, 0, 0, 0.8); /* Ensure visibility */
@@ -61,10 +65,12 @@
         color: white;
         cursor: pointer;
         padding: 10px;
+        align-items: flex-start;
     }
     /* show the menu when the hamburger icon is clicked */
     #main-nav ul.show {
         display: flex;  /* show the menu when the 'show' class is added */
+        align-items: flex-start;
     }
 }
 
