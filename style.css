@@ -88,30 +88,32 @@ body::before {
 
 /* about section */
 
+#content_section {
+    flex: 1; 
+}
+
+
 #about_main {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    padding-right: 20%;
-    /* justify-content: right; */
-    /* padding-right: 20em; */
+    padding-right: 30%;
     min-width: 200px;
+
 
 }
 
 #main {
     display: flex;
     flex-direction: row;
-    align-items: flex-end;
-    padding-right: 20%;
-    width: 70%;
-    /* justify-content: right; */
-    /* padding-right: 20em; */
-    min-width: 200px;
-
+    align-items: flex-start; /* ensure top alignment */
+    gap: 2rem;               /* spacing between profile and content */
+    padding: 2rem;
+    flex-wrap: wrap;
 }
 
-#main_profile {
+
+#profile_div {
     display: flex;
     flex-direction: column;
     align-items: center; 
@@ -134,13 +136,15 @@ body::before {
     min-width: 200px; 
     display: flex;
     flex-direction: column;
-    width: 20%;
     background-color: gray;
     word-wrap: break-word;
     overflow-wrap: break-word;
-    text-align: left;
+    /* text-align: left; */
+    margin-left: 20%;
 
 }
+
+
 
 .gradient-border {
     display: flex;
@@ -161,7 +165,21 @@ img {
     display: block;
 }
 
-#content-section {
-    padding-left: 100%;
-    width: 300px;
+#about_h2 {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 1350px) {
+    #main, #about  {
+        display: flex;
+        flex-direction: column;  
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+  
 }
