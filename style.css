@@ -51,6 +51,96 @@ body::before {
     display: none;
 }
 
+
+/* about section */
+
+#content_section {
+    flex: 1; 
+}
+
+
+#about_main {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-right: 30%;
+    min-width: 200px;
+
+
+}
+
+#main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;   
+    align-items: flex-start;
+    gap: 3rem;                   /* space between them */
+    padding: 2rem;
+    flex-wrap: wrap;
+    max-width: 1200px;           
+    margin: 0 auto;              /* ✅ Horizontally center the whole thing */
+}
+
+
+#profile_div {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+ 
+}
+
+
+#about_para {
+    padding: 10px;
+    word-wrap: break-word; /* make sure words break properly */
+    overflow-wrap: break-word; 
+    text-align: left; 
+    background-color: lightblue;
+    
+}
+
+
+#profile {
+    min-width: 200px; 
+    width: 300px;
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    background-color: gray;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+
+.gradient-border {
+    display: flex;
+    align-items: center;
+    width: 160px;
+    height: 160px;
+    background: linear-gradient(135deg, #1fcc0f, #7873f5); /* gradient */
+    border-radius: 50%;
+    padding: 5px; /* thickness of border */
+    display: inline-block;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+}
+
+#about_h2 {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
 @media (max-width: 768px) {
     #main-nav {
         flex-direction: column;  /* navbar vertically */
@@ -84,102 +174,4 @@ body::before {
         display: flex;  /* show the menu when the 'show' class is added */
         align-items: flex-start;
     }
-}
-
-/* about section */
-
-#content_section {
-    flex: 1; 
-}
-
-
-#about_main {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    padding-right: 30%;
-    min-width: 200px;
-
-
-}
-
-#main {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start; /* ensure top alignment */
-    gap: 2rem;               /* spacing between profile and content */
-    padding: 2rem;
-    flex-wrap: wrap;
-}
-
-
-#profile_div {
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    justify-content: center;
- 
-}
-
-
-#about_para {
-    width: 40em; 
-    word-wrap: break-word; /* make sure words break properly */
-    overflow-wrap: break-word; 
-    text-align: left; 
-    background-color: lightblue;
-    
-}
-
-
-#profile {
-    min-width: 200px; 
-    display: flex;
-    flex-direction: column;
-    background-color: gray;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    /* text-align: left; */
-    margin-left: 20%;
-
-}
-
-
-
-.gradient-border {
-    display: flex;
-    align-items: center;
-    width: 160px;
-    height: 160px;
-    background: linear-gradient(135deg, #1fcc0f, #7873f5); /* gradient */
-    border-radius: 50%;
-    padding: 5px; /* thickness of border */
-    display: inline-block;
-}
-
-img {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    object-fit: cover;
-    display: block;
-}
-
-#about_h2 {
-    width: 80%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
-@media (max-width: 1350px) {
-    #main, #about  {
-        display: flex;
-        flex-direction: column;  
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-  
 }
