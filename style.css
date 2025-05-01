@@ -63,7 +63,7 @@ body::before {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    padding-right: 30%;
+    padding-right: 10%;
     min-width: 200px;
 
 
@@ -78,7 +78,7 @@ body::before {
     padding: 2rem;
     flex-wrap: wrap;
     max-width: 1200px;           
-    margin: 0 auto;              /* ✅ Horizontally center the whole thing */
+    margin: 0 auto;              /* center the whole thing */
 }
 
 
@@ -173,5 +173,19 @@ img {
     #main-nav ul.show {
         display: flex;  /* show the menu when the 'show' class is added */
         align-items: flex-start;
+    }
+
+    #main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    #about_main {
+        padding-right: 0; /*remove the right padding entirely*/
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 }
