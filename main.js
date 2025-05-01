@@ -15,9 +15,6 @@ document.addEventListener("DOMContentLoaded", () =>  {
 
         if (selectedDiv) { // if it exists
             selectedDiv.style.display = "block";
-            selectedDiv.querySelectorAll("div").forEach(child => {
-                child.style.display = "block";
-            })
         }
 
         
