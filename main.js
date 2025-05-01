@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () =>  {
 
     function clear(id) {
         document.querySelectorAll("#main > div").forEach(div => { // only select direct div children of main
-                div.style.display = "none";
+            div.style.display = "none";
             
         });
         let selectedDiv = document.getElementById(id);
