@@ -24,4 +24,21 @@ document.addEventListener("DOMContentLoaded", () =>  {
         clear("about");
     });
 
+    let toggleLink = document.getElementById("toggle-more");
+    let moreContent = document.getElementById("more-about");
+
+    toggleLink.addEventListener("click", function () {
+    let isHidden = moreContent.style.display === "none" || moreContent.style.display === "";
+
+    if (isHidden) {
+      moreContent.style.display = "block";
+      moreContent.classList.add("hidden-text"); // trigger animation
+      toggleLink.textContent = "Show Less";
+    } else {
+      moreContent.style.display = "none";
+      toggleLink.textContent = "Show More";
+    }
+  });
+
+
 });
