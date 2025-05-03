@@ -1,34 +1,16 @@
 document.addEventListener("DOMContentLoaded", () =>  {
     
     let hamburgerMenu = document.getElementById("hamburger-menu");
-    let navLinks = document.querySelector("#main-nav ul");
+    let hamburgerNavLinks = document.querySelector("#main-nav ul");
     hamburgerMenu.addEventListener("click", () => {
-        navLinks.classList.toggle("show");  
+        hamburgerNavLinks.classList.toggle("show");  
     });
-
-    function clear(id) {
-        document.querySelectorAll("#main > div").forEach(div => { // only select direct div children of main
-            div.style.display = "none";
-            
-        });
-        let selectedDiv = document.getElementById(id);
-
-        if (selectedDiv) { // if it exists
-            selectedDiv.style.display = "block";
-        }
-
-        
-    }
-
-    // document.getElementById("about-link").addEventListener("click", () => {
-    //     clear("about");
-    // });
 
     let toggleLink = document.getElementById("toggle-more");
     let moreContent = document.getElementById("more-about");
 
     toggleLink.addEventListener("click", function () {
-    let isHidden = moreContent.style.display === "none" || moreContent.style.display === "";
+    let isHidden = moreContent.style.display == "none" || moreContent.style.display == "";
 
     if (isHidden) {
       moreContent.style.display = "block";
@@ -39,6 +21,37 @@ document.addEventListener("DOMContentLoaded", () =>  {
       toggleLink.textContent = "Show More";
     }
     });
+
+    const sections = document.querySelectorAll(".section");
+    const navLinks = document.querySelectorAll("#main-nav ul li a");
+    // #main-nav -> ul -> li -> a, ie only get the a tags inside li tags inside ul tags inside the id main-nav
+
+    navLinks.forEach(link => {
+        link.addEventListener("click", () => {
+            const targetId = link.id.replace("-link", ""); // searches for "-link" and changes it with "" -> gives our actual link id's
+
+            // hide all sections
+            sections.forEach(section => {
+                section.style.display = "none";
+                section.style.opacity = 0;
+            });
+
+            // remove active class from all nav links
+            navLinks.forEach(link => link.classList.remove("active"));
+
+            // show the target section
+            const targetSection = document.getElementById(targetId);
+            if (targetSection) {
+                targetSection.style.display = "block";
+                void targetSection.offsetWidth; // forces a "repaint/reflow" of the DOM so the animation restarts correctly
+                targetSection.style.animation = "fadeIn 0.4s ease-in forwards";
+            }
+
+            // Highlight the current nav item
+            link.classList.add("active");
+        });
+    });
+
 
     
 
