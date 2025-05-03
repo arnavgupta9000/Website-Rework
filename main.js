@@ -20,9 +20,9 @@ document.addEventListener("DOMContentLoaded", () =>  {
         
     }
 
-    document.getElementById("about-link").addEventListener("click", () => {
-        clear("about");
-    });
+    // document.getElementById("about-link").addEventListener("click", () => {
+    //     clear("about");
+    // });
 
     let toggleLink = document.getElementById("toggle-more");
     let moreContent = document.getElementById("more-about");
@@ -38,7 +38,9 @@ document.addEventListener("DOMContentLoaded", () =>  {
       moreContent.style.display = "none";
       toggleLink.textContent = "Show More";
     }
-  });
+    });
+
+    
 
 
 });
