@@ -223,7 +223,6 @@ img {
 .section {
     display: none;
     opacity: 0;
-
     animation: fadeIn 0.4s ease-in forwards;
 
 }
@@ -231,9 +230,194 @@ img {
 #about {
     display: block;
 }
+
+
+
+/* experiences section now */
  
+#experiences_main {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-right: 10%;
+    min-width: 200px;
+    width: 100%;
+}
 
+#experiences_h2 {
+    margin: 0 auto;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
 
+.timeline {
+    position: relative;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    padding-left: 40px; /* Space for the dots */
+}
+
+/* The main vertical line */
+.timeline::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background-color: rgb(255, 152, 0);
+    top: 20px; /* Start at the center of the first dot */
+    bottom: 10px; /* End at the center of the last dot */
+    left: 10px; /* Centered with the dots */
+    z-index: 1;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 50px;
+    opacity: 0;
+    animation: fadeSlideIn 0.5s ease-in-out forwards;
+}
+
+/* The dot styling */
+.timeline-dot {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: -40px;
+    top: 20px; /* Position at the top of the card */
+    background-color: rgb(255, 152, 0);
+    border-radius: 50%;
+    z-index: 2;
+    box-shadow: 0 0 5px rgba(255, 152, 0, 0.6);
+}
+
+/* The end dot at the bottom */
+.end-dot {
+    position: relative;
+    display: block;
+    margin-left: -40px;
+    margin-bottom: 0;
+    top: 0;
+    left: 0;
+}
+
+.timeline-card {
+    padding: 25px;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.timeline-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.company-logo {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+    object-fit: contain;
+    border-radius: 8px; /* Square with rounded corners */
+    background-color: #f7f7f7dc;
+    padding: 5px;
+}
+
+.header-details h2 {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.company-name {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 5px;
+}
+
+.timeline-period {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 5px;
+}
+
+.location {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.bullet-points {
+    margin-top: 15px;
+    padding-left: 20px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.bullet-points li {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+/* Update the media query for mobile responsiveness */
+@media (max-width: 768px) {
+    #experiences_main {
+        padding-right: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .timeline {
+        padding-left: 0; /* Remove the left padding that was for dots */
+    }
+    
+    /* Hide the vertical line */
+    .timeline::before {
+        display: none;
+    }
+    
+    /* Hide the timeline dots */
+    .timeline-dot {
+        display: none;
+    }
+    
+    /* Hide the end dot */
+    .end-dot {
+        display: none;
+    }
+    
+    .timeline-card {
+        padding: 15px;
+        margin-left: 0; /* Remove any potential offsets */
+    }
+    
+    .card-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .company-logo {
+        margin-bottom: 15px;
+    }
+}
+/* end experiences section */
 
 @media (max-width: 768px) {
     #main-nav {
@@ -281,5 +465,32 @@ img {
         flex-direction: column;
         align-items: center;
         justify-content: center;
+    }
+
+    /* experiences */
+
+    #experiences_main {
+        padding-right: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .timeline-item {
+        margin-left: 40px;
+    }
+    
+    .timeline-card {
+        padding: 15px;
+    }
+    
+    .card-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .company-logo {
+        margin-bottom: 15px;
     }
 }
