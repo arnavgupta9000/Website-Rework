@@ -139,6 +139,8 @@ body {
     background-color: gray;
     word-wrap: break-word;
     overflow-wrap: break-word;
+    position: sticky;
+    top: 13%;
 }
 
 
@@ -375,6 +377,20 @@ img {
     line-height: 1.5;
 }
 
+/* projects section */
+/* use #projects-main h2 (no >), which matches any descendant, not just direct children. */
+#projects-main > h2 {
+    width: 90%;
+    margin: 0;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+    
+}
+
+
 
 /* end experiences section */
 
@@ -469,3 +485,4 @@ img {
         margin-bottom: 15px;
     }
 }
+
