@@ -159,6 +159,7 @@ img {
     border-radius: 50%;
     object-fit: cover;
     display: block;
+    user-select: none
 }
 
 #about_h2 {
@@ -291,7 +292,7 @@ img {
     width: 20px;
     height: 20px;
     left: -40px;
-    top: 20px; /* Position at the top of the card */
+    top: 0px; /* Position at the top of the card */
     background-color: rgb(255, 152, 0);
     border-radius: 50%;
     z-index: 2;
@@ -374,49 +375,7 @@ img {
     line-height: 1.5;
 }
 
-/* Update the media query for mobile responsiveness */
-@media (max-width: 768px) {
-    #experiences_main {
-        padding-right: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-    
-    .timeline {
-        padding-left: 0; /* Remove the left padding that was for dots */
-    }
-    
-    /* Hide the vertical line */
-    .timeline::before {
-        display: none;
-    }
-    
-    /* Hide the timeline dots */
-    .timeline-dot {
-        display: none;
-    }
-    
-    /* Hide the end dot */
-    .end-dot {
-        display: none;
-    }
-    
-    .timeline-card {
-        padding: 15px;
-        margin-left: 0; /* Remove any potential offsets */
-    }
-    
-    .card-header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    
-    .company-logo {
-        margin-bottom: 15px;
-    }
-}
+
 /* end experiences section */
 
 @media (max-width: 768px) {
@@ -477,12 +436,28 @@ img {
         justify-content: center;
     }
     
-    .timeline-item {
-        margin-left: 40px;
+    .timeline {
+        padding-left: 0; /* Remove the left padding that was for dots */
+    }
+    
+    /* Hide the vertical line */
+    .timeline::before {
+        display: none;
+    }
+    
+    /* Hide the timeline dots */
+    .timeline-dot {
+        display: none;
+    }
+    
+    /* Hide the end dot */
+    .end-dot {
+        display: none;
     }
     
     .timeline-card {
         padding: 15px;
+        margin-left: 0; /* remove any potential offsets */
     }
     
     .card-header {
