@@ -146,6 +146,8 @@ body {
     border-radius: 20px;
 }
 
+
+
 #profile-name {
     margin: 1rem 0;
     font-weight: bold;
@@ -153,7 +155,7 @@ body {
     text-align: center;
 }
 
-    #profile-items {
+#profile-items {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -223,6 +225,25 @@ body {
     object-fit: cover;
     display: block;
     user-select: none
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    padding: 1rem 0;
+    font-size: 24px;
+}
+  
+.social-icons i {
+    color: #f0f0f0;     
+    transition: color 0.3s;;
+}
+
+.social-icons i:hover {
+    color: #1fcc0f; 
+    transform: scale(1.2);
+
 }
 
 #about_h2 {
@@ -524,6 +545,11 @@ body {
         flex-direction: column;
         align-items: center;
         justify-content: center;
+    }
+
+    #profile {
+        position: relative;  /* disable sticky scrolling */
+
     }
 
     /* experiences */
