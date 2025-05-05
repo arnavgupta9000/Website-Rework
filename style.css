@@ -131,54 +131,80 @@ body {
 
 
 #profile {
-    min-width: 200px; 
+    min-width: 200px;
     width: 300px;
     padding-top: 1rem;
     display: flex;
     flex-direction: column;
-    background-color: gray;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
+    background: linear-gradient(-135deg, rgba(31,28,44,0.8), rgba(146,141,171,0.6));
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    color: white;
+    align-items: center;
     position: sticky;
     top: 13%;
+    border-radius: 20px;
 }
 
-#profile-items {
+#profile-name {
+    margin: 1rem 0;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+    #profile-items {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+    padding: 1rem 0;
 }
 
-.profile-header {
+.profile-items-div {
     display: flex;
-    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    background-color: rgba(126, 76, 76, 0.25);
+    padding: 0.8rem;
+    border-radius: 12px;
+    width: 85%;
+}
+
+.profile-icon-wrapper {
+    width: 40px;
+    height: 40px;
+    background-color: #262626;
+    display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: 700;
-    font-size: 12px;
-    color: #1fcc0f;
+    border-radius: 12px;
 }
 
 .profile-icon {
-    
-    padding: 1.2rem;
-    background-color: rgba(79, 78, 78, 0.984);
-    border-radius: 10px;
+    color: #fbd38d;
+    font-size: 1.2rem;
 }
-.profile-items-div {
-    width: 100%;
+
+.profile-text-wrapper {
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
+    flex-direction: column;
 }
 
-.profile-subsection {
-    margin: 0px;
-    padding: 0;
+.profile-label {
+    font-size: 0.75rem;
+    color: #c0c0c0;
+    text-transform: uppercase;
+    margin: 0;
+    letter-spacing: 1px;
 }
 
+.profile-subtext {
+    font-size: 1rem;
+    color: white;
+    margin: 0;
+}
 .gradient-border {
     display: flex;
     align-items: center;
