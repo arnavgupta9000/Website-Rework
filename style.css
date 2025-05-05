@@ -500,6 +500,9 @@ body {
 }
 
 
+.project-item {
+    padding-bottom: 2rem;
+}
 
 .project-card {
     padding: 2rem;
@@ -545,6 +548,10 @@ body {
 #projects-main img {
     width: 75%;
     height: 75%;
+}
+
+.project-text {
+    width: 90%;
 }
 
 

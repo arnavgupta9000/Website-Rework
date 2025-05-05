@@ -6,20 +6,23 @@ document.addEventListener("DOMContentLoaded", () =>  {
         hamburgerNavLinks.classList.toggle("show");  
     });
 
-    let toggleLink = document.getElementById("toggle-more");
-    let moreContent = document.getElementById("more-about");
 
-    toggleLink.addEventListener("click", function () {
-    let isHidden = moreContent.style.display == "none" || moreContent.style.display == "";
+    document.querySelectorAll(".toggle-link").forEach(link => {
+        link.addEventListener("click", () => {
+            const container = link.closest(".toggle-container")
+            const moreContent = container.querySelector(".more-content");
 
-    if (isHidden) {
-      moreContent.style.display = "block";
-      moreContent.classList.add("hidden-text"); // trigger animation
-      toggleLink.textContent = "Show Less";
-    } else {
-      moreContent.style.display = "none";
-      toggleLink.textContent = "Show More";
-    }
+            const isHidden = moreContent.style.display === "none" || moreContent.style.display === "";
+
+            if (isHidden) {
+              moreContent.style.display = "block";
+              link.textContent = "Show Less";
+            } else {
+              moreContent.style.display = "none";
+              link.textContent = "Show More";
+            }
+        
+        });
     });
 
     const sections = document.querySelectorAll(".section");
