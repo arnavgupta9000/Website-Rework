@@ -52,4 +52,57 @@ document.addEventListener("DOMContentLoaded", () =>  {
         });
     });
 
+    let flyingInterval;
+
+    function createFlyingSquare(fromEdge) {
+        const profileDiv = document.getElementById("profile_div");
+        const square = document.createElement("div");
+        square.className = "flying-square";
+
+        const size = 20;
+        const bounds = profileDiv.getBoundingClientRect();
+        const x = Math.random() * bounds.width;
+        const y = Math.random() * bounds.height;
+
+        if (fromEdge === "top") {
+            square.style.left = `${x}px`;
+            square.style.top = `0px`;
+        } else if (fromEdge === "bottom") {
+            square.style.left = `${x}px`;
+            square.style.top = `${bounds.height - size}px`;
+        } else if (fromEdge === "left") {
+            square.style.left = `0px`;
+            square.style.top = `${y}px`;
+        } else if (fromEdge === "right") {
+            square.style.left = `${bounds.width - size}px`;
+            square.style.top = `${y}px`;
+        }
+
+        profileDiv.appendChild(square);
+
+        // Animate
+        requestAnimationFrame(() => {
+            square.style.transform = `translate(${(Math.random() - 0.5) * 200}px, ${(Math.random() - 0.5) * 200}px) rotate(${Math.random() * 360}deg)`;
+            square.style.opacity = "0";
+        });
+
+        setTimeout(() => {
+            profileDiv.removeChild(square);
+        }, 1500);
+    }
+
+    document.getElementById("profile_div").addEventListener("mouseenter", () => {
+        const edges = ["top", "bottom", "left", "right"];
+        flyingInterval = setInterval(() => {
+            const edge = edges[Math.floor(Math.random() * edges.length)];
+            createFlyingSquare(edge);
+        }, 200); 
+    });
+
+    document.getElementById("profile_div").addEventListener("mouseleave", () => {
+        clearInterval(flyingInterval);
+    });
+
+
+
 });
