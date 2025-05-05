@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", () =>  {
 
         profileDiv.appendChild(square);
 
-        // Animate
+        // animate
         requestAnimationFrame(() => {
             square.style.transform = `translate(${(Math.random() - 0.5) * 200}px, ${(Math.random() - 0.5) * 200}px) rotate(${Math.random() * 360}deg)`;
             square.style.opacity = "0";
@@ -88,7 +88,7 @@ document.addEventListener("DOMContentLoaded", () =>  {
 
         setTimeout(() => {
             profileDiv.removeChild(square);
-        }, 1500);
+        }, 1500); // after 1.5 seconds they disappear
     }
 
     document.getElementById("profile_div").addEventListener("mouseenter", () => {

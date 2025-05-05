@@ -146,8 +146,15 @@ body {
     position: sticky;
     top: 13%;
     border-radius: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
 }
 
+#profile:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+
+
+}
 
 
 #profile-name {
