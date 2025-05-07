@@ -107,5 +107,21 @@ document.addEventListener("DOMContentLoaded", () =>  {
     });
 
 
+    function copyEmail() {
+        const email = document.getElementById("email-text").textContent;
+        navigator.clipboard.writeText(email).then(() => {
+          const confirmation = document.getElementById("copy-confirmation");
+          confirmation.style.display = "inline";
+          setTimeout(() => {
+            confirmation.style.display = "none";
+          }, 1500);
+        });
+    };
+
+    document.getElementById("copy-button").addEventListener("click", () => {
+        copyEmail();
+    })
+
+
 
 });
