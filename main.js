@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () =>  {
                 targetSection.style.animation = "fadeIn 0.4s ease-in forwards";
             }
 
-            // Highlight the current nav item
+            // highlight the current nav item
             link.classList.add("active");
         });
     });
