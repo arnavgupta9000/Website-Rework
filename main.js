@@ -120,7 +120,7 @@ document.addEventListener("DOMContentLoaded", () =>  {
 
     document.getElementById("copy-button").addEventListener("click", () => {
         copyEmail();
-    })
+    });
 
 
 
