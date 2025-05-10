@@ -415,7 +415,7 @@ body {
 }
 
 #interests-wrapper {
-    margin-top: 20px;
+    margin-top: 30px;
     width: 100%;
     display: flex;            
     flex-wrap: wrap;          
@@ -584,6 +584,9 @@ body {
     line-height: 1.5;
 }
 
+/* end experience section */
+
+
 /* projects section */
 /* use #projects-main h2 (no >), which matches any descendant, not just direct children. */
 #projects-main > h2 {
@@ -657,7 +660,7 @@ body {
 
 
 
-/* end experiences section */
+/* end project section */
 
 .contact-section {
     display: flex;
@@ -787,6 +790,12 @@ body {
     display: none;
     text-align: center;
     margin-top: 0.8rem;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
   
 
