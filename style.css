@@ -658,6 +658,22 @@ body {
     width: 90%;
 }
 
+.github-button {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    background-color: #24292e;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+}
+
+.github-button:hover {
+    background-color: #0366d6;
+}
+
 
 
 /* end project section */
