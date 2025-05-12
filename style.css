@@ -820,7 +820,7 @@ body {
 
 }
 
-#exp-button-link {
+.next-button {
     margin-left: auto; 
     padding: 0.75rem 0.75rem;  
     background-color: rgba(255, 255, 255, 0.1);   
@@ -835,10 +835,18 @@ body {
 
 }
 
-#exp-button-link:hover {
+.next-button:hover {
     transform: translateY(-3px) translateX(-3px);
     box-shadow: 4.5px 4.5px  #424950;
     background-color: rgba(255, 255, 255, 0.2);
+}
+
+.project-button {
+    padding-top: 0;
+}
+
+.contact-button {
+    padding-top: 20px;
 }
 
 

@@ -25,35 +25,44 @@ document.addEventListener("DOMContentLoaded", () =>  {
         });
     });
 
-    const sections = document.querySelectorAll(".section");
+    function showContentById(targetId) {
+        const sections = document.querySelectorAll(".section");
+        const navLinks = document.querySelectorAll("#main-nav ul li a");
+
+        // hide all sections
+        sections.forEach(section => {
+            section.style.display = "none";
+            section.style.opacity = 0;
+        });
+
+        // remove active class from all nav links
+        navLinks.forEach(link => link.classList.remove("active"));
+    
+        // show the target section
+        const targetSection = document.getElementById(targetId);
+        if (targetSection) {
+            targetSection.style.display = "block";
+            void targetSection.offsetWidth; // Reflow
+            targetSection.style.animation = "fadeIn 0.4s ease-in forwards";
+        }
+
+        // highlight the current nav item
+        const matchingNavLink = document.getElementById(`${targetId}-link`);
+        if (matchingNavLink) {
+            matchingNavLink.classList.add("active");
+        }
+    }
+    
+
     const navLinks = document.querySelectorAll("#main-nav ul li a");
-    // #main-nav -> ul -> li -> a, ie only get the a tags inside li tags inside ul tags inside the id main-nav
 
     navLinks.forEach(link => {
         link.addEventListener("click", () => {
-            const targetId = link.id.replace("-link", ""); // searches for "-link" and changes it with "" -> gives our actual link id's
-
-            // hide all sections
-            sections.forEach(section => {
-                section.style.display = "none";
-                section.style.opacity = 0;
-            });
-
-            // remove active class from all nav links
-            navLinks.forEach(link => link.classList.remove("active"));
-
-            // show the target section
-            const targetSection = document.getElementById(targetId);
-            if (targetSection) {
-                targetSection.style.display = "block";
-                void targetSection.offsetWidth; // forces a "repaint/reflow" of the DOM so the animation restarts correctly
-                targetSection.style.animation = "fadeIn 0.4s ease-in forwards";
-            }
-
-            // highlight the current nav item
-            link.classList.add("active");
+            const targetId = link.id.replace("-link", "");
+            showContentById(targetId);
         });
     });
+
 
     let flyingInterval;
 
@@ -122,6 +131,34 @@ document.addEventListener("DOMContentLoaded", () =>  {
         copyEmail();
     });
 
+   
+
+    document.getElementById("experience-button-link").addEventListener("click", () => {
+        showContentById("experiences");
+        window.scrollTo({
+            top: 0
+        });
+        
+    });
+
+    document.getElementById("project-button-link").addEventListener("click", () => {
+        showContentById("projects");
+        window.scrollTo({
+            top: 0
+        });
+        
+    });
+
+    document.getElementById("contact-button-link").addEventListener("click", () => {
+        showContentById("contact");
+        window.scrollTo({
+            top: 0
+        });
+        
+    });
+
+
+    
 
 
 });
