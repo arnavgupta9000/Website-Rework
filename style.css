@@ -342,6 +342,7 @@ body {
 
 #about {
     display: block;
+    
 }
 
 
@@ -808,6 +809,39 @@ body {
     margin-top: 0.8rem;
 }
 
+.button-holder {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    /* justify-content: flex-end; */
+    /* ^^ will also work if remove the #exp-button-link all together */
+
+    padding-top: 20px;
+
+}
+
+#exp-button-link {
+    margin-left: auto; 
+    padding: 0.75rem 0.75rem;  
+    background-color: rgba(255, 255, 255, 0.15);    /* Subtle glassy feel */
+    color: white;
+    font-size: 18px;
+    border-radius: 10px;
+    box-shadow: 3px 3px black;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    outline: none; 
+
+}
+
+#exp-button-link:hover {
+    transform: translateY(-3px) translateX(-3px);
+    box-shadow: 4.5px 4.5px black;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+
 .footer {
     display: flex;
     flex-direction: column;
@@ -910,6 +944,8 @@ body {
     .company-logo {
         margin-bottom: 15px;
     }
+
+    
 }
 
 
